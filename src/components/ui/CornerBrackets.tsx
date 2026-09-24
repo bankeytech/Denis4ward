@@ -3,11 +3,13 @@ import React from "react";
 interface CornerBracketsProps {
   offset?: number;
   className?: string;
+  color?: string;
 }
 
 export const CornerBrackets: React.FC<CornerBracketsProps> = ({
   offset = 14,
   className = "",
+  color = "#F7C948",
 }) => {
   return (
     <div className={`pointer-events-none absolute inset-0 z-10 ${className}`}>
@@ -22,8 +24,8 @@ export const CornerBrackets: React.FC<CornerBracketsProps> = ({
       >
         <path
           d="M21 1H1V21"
-          stroke="#141414"
-          strokeOpacity="0.25"
+          stroke={color}
+          strokeOpacity="0.4"
           strokeWidth="1.2"
           strokeDasharray="3 3"
         />
@@ -40,8 +42,8 @@ export const CornerBrackets: React.FC<CornerBracketsProps> = ({
       >
         <path
           d="M1 1H21V21"
-          stroke="#141414"
-          strokeOpacity="0.25"
+          stroke={color}
+          strokeOpacity="0.4"
           strokeWidth="1.2"
           strokeDasharray="3 3"
         />
@@ -58,8 +60,8 @@ export const CornerBrackets: React.FC<CornerBracketsProps> = ({
       >
         <path
           d="M21 21H1V1"
-          stroke="#141414"
-          strokeOpacity="0.25"
+          stroke={color}
+          strokeOpacity="0.4"
           strokeWidth="1.2"
           strokeDasharray="3 3"
         />
@@ -76,8 +78,8 @@ export const CornerBrackets: React.FC<CornerBracketsProps> = ({
       >
         <path
           d="M1 21H21V1"
-          stroke="#141414"
-          strokeOpacity="0.25"
+          stroke={color}
+          strokeOpacity="0.4"
           strokeWidth="1.2"
           strokeDasharray="3 3"
         />

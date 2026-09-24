@@ -10,7 +10,7 @@ import { Footer } from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#F7F6F4] selection:bg-[#111111] selection:text-white">
+    <div className="relative min-h-screen bg-[#050505] selection:bg-[#F7C948]/30 selection:text-[#F8F8F8]">
       {/* 1. Floating Rounded Navbar */}
       <Navbar />
 

@@ -8,28 +8,28 @@ export const WhyShop: React.FC = () => {
   const features = [
     {
       number: "01",
-      icon: <Package size={22} className="text-[#141414]" />,
+      icon: <Package size={22} />,
       title: "Enjoy Free Shipping",
       description:
         "Fast, reliable door-to-door courier service with zero hidden charges on every qualified purchase.",
     },
     {
       number: "02",
-      icon: <ShieldCheck size={22} className="text-[#141414]" />,
+      icon: <ShieldCheck size={22} />,
       title: "Safe Payment Process",
       description:
         "Bank-grade 256-bit encryption ensuring your payments, cards, and personal data stay completely secure.",
     },
     {
       number: "03",
-      icon: <RotateCcw size={22} className="text-[#141414]" />,
+      icon: <RotateCcw size={22} />,
       title: "Smooth Return Process",
       description:
         "A hassle-free 30-day trial with instant label generation and complimentary doorstep return pickup.",
     },
     {
       number: "04",
-      icon: <Headset size={22} className="text-[#141414]" />,
+      icon: <Headset size={22} />,
       title: "Always-On Support",
       description:
         "Our concierge tech specialists are on standby around the clock to answer questions and troubleshoot.",
@@ -44,18 +44,18 @@ export const WhyShop: React.FC = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-[12.5px] font-bold tracking-[0.15em] text-[#888888] uppercase block mb-3"
+          className="text-[12px] font-bold tracking-[0.18em] text-[#F7C948] uppercase block mb-3"
         >
-          The Solvora Standard
+          The DENIS4WARD Standard
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-[32px] sm:text-[40px] md:text-[44px] font-bold text-[#141414] tracking-[-0.03em] leading-[1.15]"
+          className="text-[32px] sm:text-[40px] md:text-[44px] font-black text-[#F8F8F8] tracking-[-0.03em] leading-[1.15] font-[family-name:var(--font-outfit)]"
         >
-          Why Shop With Solvora
+          Why Shop With DENIS4WARD
           <br className="hidden sm:inline" /> Today And Always?
         </motion.h2>
         <motion.p
@@ -63,7 +63,7 @@ export const WhyShop: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-[15px] sm:text-[16px] text-[#6B6B6B] mt-4 leading-relaxed"
+          className="text-[15px] sm:text-[16px] text-[#7A7A7A] mt-4 leading-relaxed"
         >
           Engineered hardware backed by an uncompromising commitment to
           exceptional customer care and seamless ownership.
@@ -80,24 +80,24 @@ export const WhyShop: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
-            className="group bg-white rounded-[24px] border border-[#E8E8E8] p-7 md:p-8 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.07)] transition-all duration-300 min-h-[260px]"
+            className="group bg-[#111111] rounded-[24px] border border-[#2A2A2A] p-7 md:p-8 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:border-[#F7C948]/30 transition-all duration-300 min-h-[260px]"
           >
             {/* Top row: Number & Icon */}
             <div className="flex items-center justify-between mb-8">
-              <span className="font-mono text-[14px] font-semibold text-[#A0A0A0] tracking-wider">
+              <span className="font-mono text-[14px] font-semibold text-[#444444] tracking-wider">
                 {feature.number}
               </span>
-              <div className="w-12 h-12 rounded-[16px] border border-[#EAEAEA] bg-[#F7F6F4] flex items-center justify-center text-[#141414] group-hover:bg-[#111111] group-hover:border-[#111111] group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 rounded-[16px] border border-[#2A2A2A] bg-[#1A1A1A] flex items-center justify-center text-[#7A7A7A] group-hover:bg-[#F7C948] group-hover:border-[#F7C948] group-hover:text-[#050505] transition-all duration-300">
                 {feature.icon}
               </div>
             </div>
 
             {/* Bottom Content */}
             <div>
-              <h3 className="text-[20px] font-bold text-[#141414] tracking-tight mb-2.5">
+              <h3 className="text-[19px] font-bold text-[#F8F8F8] tracking-tight mb-2.5 font-[family-name:var(--font-outfit)]">
                 {feature.title}
               </h3>
-              <p className="text-[14px] text-[#6B6B6B] leading-relaxed">
+              <p className="text-[14px] text-[#7A7A7A] leading-relaxed">
                 {feature.description}
               </p>
             </div>

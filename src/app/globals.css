@@ -1,67 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
-  --bg-main: #F7F6F4;
-  --heading: #141414;
-  --body: #6B6B6B;
-  --border: #E8E8E8;
-  --white: #FFFFFF;
-  --btn: #111111;
+  /* DENIS4WARD Brand Palette */
+  --gold-primary: #F7C948;
+  --gold-deep: #D89B1D;
+  --gold-soft: #E8C56A;
+  --black-matte: #050505;
+  --black-rich: #111111;
+  --black-graphite: #1A1A1A;
+  --black-border: #2A2A2A;
+  --white-primary: #F8F8F8;
+  --white-muted: #9A9A9A;
+
+  /* Legacy aliases */
+  --bg-main: #050505;
+  --heading: #F8F8F8;
+  --body: #9A9A9A;
+  --border: #2A2A2A;
+  --white: #F8F8F8;
+  --btn: #F7C948;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #F7F6F4;
-  color: #141414;
+  background-color: #050505;
+  color: #F8F8F8;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
-/* Atmospheric Soft Mesh Gradient */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+/* ==============================
+   HERO BACKGROUND GRADIENT
+   ============================== */
 .mesh-gradient-hero {
-  background: 
-    radial-gradient(ellipse 65% 55% at 50% 65%, rgba(246, 199, 154, 0.45) 0%, rgba(247, 216, 200, 0.35) 25%, rgba(221, 215, 246, 0.28) 50%, rgba(220, 235, 255, 0.2) 75%, transparent 100%),
-    radial-gradient(circle at 50% 30%, rgba(248, 237, 201, 0.3) 0%, transparent 60%);
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 60%, rgba(247, 201, 72, 0.08) 0%, rgba(216, 155, 29, 0.05) 40%, transparent 100%),
+    radial-gradient(circle at 30% 20%, rgba(247, 201, 72, 0.04) 0%, transparent 60%),
+    radial-gradient(circle at 70% 80%, rgba(216, 155, 29, 0.04) 0%, transparent 60%);
 }
 
+/* ==============================
+   CTA BACKGROUND GRADIENT
+   ============================== */
 .mesh-gradient-cta {
-  background: 
-    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(246, 199, 154, 0.5) 0%, rgba(247, 216, 200, 0.4) 30%, rgba(221, 215, 246, 0.32) 60%, rgba(220, 235, 255, 0.25) 85%, transparent 100%);
+  background:
+    radial-gradient(ellipse 65% 55% at 50% 50%, rgba(247, 201, 72, 0.10) 0%, rgba(216, 155, 29, 0.07) 40%, transparent 100%);
 }
 
-/* Glassmorphism Feature Pills */
+/* ==============================
+   DARK GLASSMORPHISM PILL
+   ============================== */
 .glass-pill {
-  background: rgba(255, 255, 255, 0.76);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.03);
+  background: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(247, 201, 72, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 0 0 transparent;
+  color: #F8F8F8;
 }
 
 .glass-pill:hover {
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  background: rgba(30, 30, 30, 0.95);
+  border-color: rgba(247, 201, 72, 0.5);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(247, 201, 72, 0.08);
 }
 
-/* Custom Polaroid Drop Shadow */
+/* ==============================
+   CARD SHADOWS (DARK)
+   ============================== */
 .polaroid-shadow {
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.11), 0 6px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Card Shadows */
 .shadow-large-card {
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .shadow-floating-card {
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
+/* ==============================
+   GOLD GLOW CARD HOVER
+   ============================== */
+.gold-glow-hover {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.gold-glow-hover:hover {
+  border-color: rgba(247, 201, 72, 0.45) !important;
+  box-shadow: 0 0 0 1px rgba(247, 201, 72, 0.2), 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* ==============================
+   BUTTON HOVER
+   ============================== */
 .btn-hover-shadow {
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-hover-shadow:hover {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 10px 30px rgba(247, 201, 72, 0.3);
   transform: translateY(-2px);
+}
+
+/* ==============================
+   GOLD SHIMMER LOADING
+   ============================== */
+@keyframes gold-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #1A1A1A 0%,
+    #2A2A2A 40%,
+    rgba(247, 201, 72, 0.15) 50%,
+    #2A2A2A 60%,
+    #1A1A1A 100%
+  );
+  background-size: 200% 100%;
+  animation: gold-shimmer 1.6s ease-in-out infinite;
+}
+
+/* ==============================
+   THIN GOLD DIVIDER
+   ============================== */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(247, 201, 72, 0.5), transparent);
+}
+
+/* ==============================
+   PREMIUM BADGE
+   ============================== */
+.badge-gold {
+  background: linear-gradient(135deg, #F7C948, #D89B1D);
+  color: #050505;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ==============================
+   SCROLL BAR
+   ============================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(247, 201, 72, 0.4);
+}
+
+/* ==============================
+   SELECTION
+   ============================== */
+::selection {
+  background: rgba(247, 201, 72, 0.3);
+  color: #F8F8F8;
+}
+
+/* ==============================
+   REDUCED MOTION
+   ============================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -49,7 +49,7 @@ export const CustomerFavorites: React.FC = () => {
     },
     {
       id: "audio-system",
-      title: "Solvora Spatial Soundbar",
+      title: "DENIS4WARD Spatial Soundbar",
       badge: "Staff Pick · Top Performer",
       image:
         "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=1200&q=85",
@@ -72,7 +72,7 @@ export const CustomerFavorites: React.FC = () => {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-[12.5px] font-bold tracking-[0.15em] text-[#888888] uppercase block mb-3"
+          className="text-[12px] font-bold tracking-[0.18em] text-[#F7C948] uppercase block mb-3"
         >
           Community Highlights
         </motion.span>
@@ -81,7 +81,7 @@ export const CustomerFavorites: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-[32px] sm:text-[40px] md:text-[44px] font-bold text-[#141414] tracking-[-0.03em] leading-[1.15]"
+          className="text-[32px] sm:text-[40px] md:text-[44px] font-black text-[#F8F8F8] tracking-[-0.03em] leading-[1.15] font-[family-name:var(--font-outfit)]"
         >
           Highly Rated Customer Favorites
         </motion.h2>
@@ -90,7 +90,7 @@ export const CustomerFavorites: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-[15px] sm:text-[16px] text-[#6B6B6B] mt-4 leading-relaxed"
+          className="text-[15px] sm:text-[16px] text-[#7A7A7A] mt-4 leading-relaxed"
         >
           Flagship grade performance selected and rated highest by our global community.
         </motion.p>
@@ -102,47 +102,49 @@ export const CustomerFavorites: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="bg-white rounded-[32px] md:rounded-[40px] border border-[#E8E8E8] shadow-[0_20px_60px_rgba(0,0,0,0.06)] overflow-hidden"
+        className="bg-[#0E0E0E] rounded-[32px] md:rounded-[40px] border border-[#2A2A2A] shadow-[0_20px_60px_rgba(0,0,0,0.6)] overflow-hidden"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[500px]">
-          {/* Left Column: Product Photo + Streaming UI + Overlay Add to Cart (7 cols) */}
-          <div className="lg:col-span-7 relative bg-[#F2F1ED] p-6 sm:p-10 flex items-center justify-center overflow-hidden min-h-[360px] lg:min-h-full">
+          {/* Left Column: Product Photo (7 cols) */}
+          <div className="lg:col-span-7 relative bg-[#0A0A0A] p-6 sm:p-10 flex items-center justify-center overflow-hidden min-h-[360px] lg:min-h-full">
             {/* TV Screen Mockup Display */}
-            <div className="relative w-full max-w-[560px] aspect-[16/10] rounded-[20px] overflow-hidden shadow-2xl border-4 border-[#1E1E1E] bg-black">
+            <div className="relative w-full max-w-[560px] aspect-[16/10] rounded-[20px] overflow-hidden shadow-2xl border-4 border-[#1A1A1A] bg-black">
               <img
                 src={current.image}
                 alt={current.title}
-                className="w-full h-full object-cover grayscale-[15%] contrast-[1.05]"
+                className="w-full h-full object-cover grayscale-[15%] contrast-[1.05] brightness-[0.85]"
               />
               {/* Sleek UI overlay on screen */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30 pointer-events-none p-5 flex flex-col justify-between">
                 <div className="flex items-center justify-between text-white/80 text-[11px] font-medium tracking-wide">
-                  <span className="bg-white/20 backdrop-blur-md px-2.5 py-1 rounded-md">SOLVORA OS 4K</span>
+                  <span className="bg-[#F7C948]/20 backdrop-blur-md px-2.5 py-1 rounded-md text-[#F7C948] font-bold">
+                    DENIS4WARD OS 4K
+                  </span>
                   <span>HDR10+ · 120Hz</span>
                 </div>
                 <div className="text-white">
-                  <div className="text-[11px] uppercase tracking-wider text-orange-400 font-semibold mb-0.5">Now Playing</div>
+                  <div className="text-[11px] uppercase tracking-wider text-[#F7C948] font-semibold mb-0.5">Now Playing</div>
                   <div className="text-[15px] font-bold">Atmospheres: Deep Orbit Nature Doc</div>
                 </div>
               </div>
             </div>
 
-            {/* Bottom-left overlay pill: Add to Cart */}
+            {/* Bottom-left overlay: Add to Cart */}
             <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 z-20">
               <button
                 onClick={() => {
                   setAddedToCart(true);
                   setTimeout(() => setAddedToCart(false), 2200);
                 }}
-                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[13.5px] font-semibold transition-all duration-300 shadow-[0_8px_25px_rgba(0,0,0,0.12)] ${
+                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[13.5px] font-semibold transition-all duration-300 shadow-[0_8px_25px_rgba(0,0,0,0.4)] ${
                   addedToCart
-                    ? "bg-[#111111] text-white"
-                    : "bg-white/95 backdrop-blur-md text-[#141414] hover:bg-[#111111] hover:text-white border border-white"
+                    ? "bg-[#F7C948] text-[#050505]"
+                    : "bg-[#1A1A1A]/90 backdrop-blur-md text-[#F8F8F8] hover:bg-[#F7C948] hover:text-[#050505] border border-[#3A3A3A]"
                 }`}
               >
                 {addedToCart ? (
                   <>
-                    <Check size={16} className="text-green-400" />
+                    <Check size={16} className="text-[#050505]" />
                     <span>Added to Cart!</span>
                   </>
                 ) : (
@@ -156,86 +158,72 @@ export const CustomerFavorites: React.FC = () => {
           </div>
 
           {/* Right Column: Information, Countdown, Offer (5 cols) */}
-          <div className="lg:col-span-5 p-8 sm:p-12 md:p-14 flex flex-col justify-center">
+          <div className="lg:col-span-5 p-8 sm:p-12 md:p-14 flex flex-col justify-center bg-[#0E0E0E]">
             {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F7F6F4] border border-[#E8E8E8] text-[12px] font-semibold text-[#666666] w-fit mb-5">
-              <Truck size={13} className="text-[#141414]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F7C948]/10 border border-[#F7C948]/20 text-[12px] font-semibold text-[#F7C948] w-fit mb-5">
+              <Truck size={13} className="text-[#F7C948]" />
               <span>{current.badge}</span>
             </div>
 
             {/* Title */}
-            <h3 className="text-[28px] sm:text-[34px] font-bold text-[#141414] tracking-tight leading-[1.15]">
+            <h3 className="text-[28px] sm:text-[33px] font-black text-[#F8F8F8] tracking-tight leading-[1.15] font-[family-name:var(--font-outfit)]">
               {current.title}
             </h3>
 
             {/* Rating */}
             <div className="flex items-center gap-2 mt-3">
-              <div className="flex text-amber-500">
+              <div className="flex text-[#F7C948]">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={15} fill="currentColor" />
                 ))}
               </div>
-              <span className="text-[13px] font-medium text-[#777777]">
+              <span className="text-[13px] font-medium text-[#6A6A6A]">
                 {current.reviews}
               </span>
             </div>
 
-            {/* Offer Text */}
-            <p className="text-[14.5px] leading-relaxed text-[#6B6B6B] mt-4">
+            {/* Description */}
+            <p className="text-[14.5px] leading-relaxed text-[#7A7A7A] mt-4">
               {current.description}
             </p>
 
             {/* Price Row */}
             <div className="flex items-baseline gap-3 mt-6">
-              <span className="text-[32px] sm:text-[36px] font-extrabold text-[#141414] tracking-tight font-mono">
+              <span className="text-[32px] sm:text-[36px] font-extrabold text-[#F7C948] tracking-tight font-mono">
                 {current.price}
               </span>
-              <span className="text-[18px] text-[#A0A0A0] line-through font-mono">
+              <span className="text-[18px] text-[#444444] line-through font-mono">
                 {current.originalPrice}
               </span>
-              <span className="text-[12px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+              <span className="text-[12px] font-bold text-emerald-400 bg-emerald-400/10 px-2.5 py-1 rounded-full border border-emerald-400/20">
                 {current.discount}
               </span>
             </div>
 
             {/* 4 Countdown Boxes */}
             <div className="mt-8">
-              <span className="text-[11.5px] font-bold uppercase tracking-[0.15em] text-[#888888] block mb-2.5">
+              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#5A5A5A] block mb-2.5">
                 Limited Time Drop Ends In:
               </span>
               <div className="grid grid-cols-4 gap-2.5 max-w-[340px]">
-                <div className="border border-[#E2E2E2] rounded-[16px] py-2.5 px-2 text-center bg-[#FAF9F7]">
-                  <span className="block text-[20px] font-bold text-[#141414] font-mono leading-none">
-                    {timeLeft.days}
-                  </span>
-                  <span className="block text-[9.5px] font-semibold text-[#888888] uppercase mt-1 tracking-wider">
-                    Days
-                  </span>
-                </div>
-                <div className="border border-[#E2E2E2] rounded-[16px] py-2.5 px-2 text-center bg-[#FAF9F7]">
-                  <span className="block text-[20px] font-bold text-[#141414] font-mono leading-none">
-                    {timeLeft.hours}
-                  </span>
-                  <span className="block text-[9.5px] font-semibold text-[#888888] uppercase mt-1 tracking-wider">
-                    Hours
-                  </span>
-                </div>
-                <div className="border border-[#E2E2E2] rounded-[16px] py-2.5 px-2 text-center bg-[#FAF9F7]">
-                  <span className="block text-[20px] font-bold text-[#141414] font-mono leading-none">
-                    {timeLeft.mins}
-                  </span>
-                  <span className="block text-[9.5px] font-semibold text-[#888888] uppercase mt-1 tracking-wider">
-                    Mins
-                  </span>
-                </div>
-                <div className="border border-[#E2E2E2] rounded-[16px] py-2.5 px-2 text-center bg-[#FAF9F7]">
-                  <span className="block text-[20px] font-bold text-[#141414] font-mono leading-none">
-                    {timeLeft.secs}
-                  </span>
-                  <span className="block text-[9.5px] font-semibold text-[#888888] uppercase mt-1 tracking-wider">
-                    Secs
-                  </span>
-                </div>
+                {[
+                  { label: "Days", val: timeLeft.days },
+                  { label: "Hours", val: timeLeft.hours },
+                  { label: "Mins", val: timeLeft.mins },
+                  { label: "Secs", val: timeLeft.secs },
+                ].map(({ label, val }) => (
+                  <div
+                    key={label}
+                    className="border border-[#2A2A2A] rounded-[16px] py-2.5 px-2 text-center bg-[#141414]"
+                  >
+                    <span className="block text-[20px] font-bold text-[#F8F8F8] font-mono leading-none">
+                      {val}
+                    </span>
+                    <span className="block text-[9.5px] font-semibold text-[#5A5A5A] uppercase mt-1 tracking-wider">
+                      {label}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -243,7 +231,7 @@ export const CustomerFavorites: React.FC = () => {
             <div className="mt-8">
               <a
                 href="#categories"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#111111] text-white text-[14px] font-medium px-8 py-3.5 rounded-full hover:bg-black transition-all duration-200 btn-hover-shadow"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F7C948] text-[#050505] text-[14px] font-bold px-8 py-3.5 rounded-full hover:bg-[#D89B1D] transition-all duration-200 shadow-[0_6px_24px_rgba(247,201,72,0.25)] hover:shadow-[0_8px_32px_rgba(247,201,72,0.4)] hover:-translate-y-0.5"
               >
                 Claim Limited Offer
               </a>
@@ -252,7 +240,7 @@ export const CustomerFavorites: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Bottom Controls: Progress Dots (Left) + Arrows (Right) */}
+      {/* Bottom Controls */}
       <div className="flex items-center justify-between mt-8 px-2">
         {/* Progress Dots */}
         <div className="flex items-center gap-2">
@@ -262,8 +250,8 @@ export const CustomerFavorites: React.FC = () => {
               onClick={() => setActiveSlide(idx)}
               className={`h-2 rounded-full transition-all duration-300 ${
                 activeSlide === idx
-                  ? "w-8 bg-[#141414]"
-                  : "w-2 bg-[#D4D4D4] hover:bg-[#A0A0A0]"
+                  ? "w-8 bg-[#F7C948]"
+                  : "w-2 bg-[#2A2A2A] hover:bg-[#4A4A4A]"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
@@ -278,7 +266,7 @@ export const CustomerFavorites: React.FC = () => {
                 prev === 0 ? spotlightProducts.length - 1 : prev - 1
               )
             }
-            className="w-11 h-11 rounded-full border border-[#E0E0E0] bg-white flex items-center justify-center text-[#666666] hover:border-[#141414] hover:text-[#141414] transition-all shadow-sm hover:scale-105"
+            className="w-11 h-11 rounded-full border border-[#2A2A2A] bg-[#111111] flex items-center justify-center text-[#6A6A6A] hover:border-[#F7C948]/50 hover:text-[#F7C948] transition-all shadow-sm hover:scale-105"
             aria-label="Previous Spotlight Product"
           >
             <ChevronLeft size={20} />
@@ -289,7 +277,7 @@ export const CustomerFavorites: React.FC = () => {
                 prev === spotlightProducts.length - 1 ? 0 : prev + 1
               )
             }
-            className="w-11 h-11 rounded-full bg-[#111111] text-white flex items-center justify-center hover:bg-black transition-all shadow-sm hover:scale-105"
+            className="w-11 h-11 rounded-full bg-[#F7C948] text-[#050505] flex items-center justify-center hover:bg-[#D89B1D] transition-all shadow-sm hover:scale-105"
             aria-label="Next Spotlight Product"
           >
             <ChevronRight size={20} />
